@@ -1,0 +1,65 @@
+@import "bootstrap/bootstrap";
+@import "variables";
+
+header {
+  background-color: rgba(255, 255, 255, 0.7);
+  &>div {
+    .container-fluid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &>div {
+      .make-row();
+      &>div:first-child {
+        .make-md-column(2);
+        img {
+          height: @alto-imagen;
+        }
+      }
+      &>div:nth-child(2) {
+        .make-md-column(8);
+        .make-row();
+        margin-top: @alto-imagen - 40;
+        &>div {
+          .make-md-column(12.0/5.0);
+          .text-center;
+          a {
+            font-family: roboto-light;
+            font-size: 18pt;
+            color: #000;
+          }
+          a:hover {
+            font-family: roboto-medium;
+            text-decoration: none;
+          }
+          a:visited, a:active {
+            text-decoration: none;
+          }
+          a.activo {
+            font-family: roboto-regular;
+          }
+        }
+      }
+      &>div:last-child {
+        .make-md-column(2);
+        p {
+          text-align: right;
+          font-family: roboto-light;
+          font-size: 8pt;
+          a {
+            color: #000;
+          }
+          a:hover {
+            font-family: roboto-medium;
+            text-decoration: none;
+          }
+          a:visited, a:active {
+            text-decoration: none;
+          }
+          a.activo {
+            font-family: roboto-regular;
+          }
+        }
+      }
+    }
+  }
+}

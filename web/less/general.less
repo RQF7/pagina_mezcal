@@ -1,0 +1,67 @@
+
+/* Fuentes ****************************************************************************************/
+
+@font-face {
+  font-family: roboto-regular;
+  src: url(../fuentes/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: roboto-bold;
+  src: url(../fuentes/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: roboto-black;
+  src: url(../fuentes/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: roboto-medium;
+  src: url(../fuentes/roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: roboto-light;
+  src: url(../fuentes/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: roboto-thin;
+  src: url(../fuentes/roboto/Roboto-Thin.ttf);
+}
+
+/* Estilos generales ******************************************************************************/
+
+body {
+  font-family: roboto-regular;
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Estilos de páginas con recuadro informativo ****************************************************/
+
+body>div {
+  .container-fluid;
+  &>div {
+    &>div {
+      .make-md-column(4.5);
+      margin-top: 50px;
+      margin-left: 50px;
+      margin-right: 50px;
+      padding: 0px 30px 30px 30px;
+      background-color: rgba(255, 255, 255, 0.7);
+      h1 {
+        font-family: roboto-medium;
+        font-size: 24pt;
+        color: #555;
+      }
+      p {
+        text-align: justify;
+        line-height: 1.0;
+      }
+    }
+  }
+}
