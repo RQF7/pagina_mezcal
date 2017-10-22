@@ -8,7 +8,6 @@
 	<property name="aplicacion.ruta" value="/${aplicacion.nombre}"/>
 	<property name="aplicacion.version" value="0.1-dev"/>
 	<property name="carpeta.construccion" value="${basedir}/en_construccion"/>
-	<property name="carpeta.tomcat" value="/usr/share/tomcat8"/>
 	<property name="carpeta.distribucion" value="${basedir}/distribucion"/>
 	<property name="carpeta.documentacion" value="${basedir}/documentacion"/>
 	<property name="url.administracion"
@@ -77,13 +76,8 @@
 
 	</target>
 
-	<target name="distribuir" depends="compilar,documentar"
+	<target name="distribuir" depends="compilar"
 		description="Crea una distribución binaria">
-
-		<mkdir dir="${carpeta.distribucion}/docs"/>
-		<copy todir="${carpeta.distribucion}/docs">
-			<fileset dir="${carpeta.documentacion}"/>
-		</copy>
 
 		<jar jarfile="${carpeta.distribucion}/${aplicacion.nombre}-${aplicacion.version}.war"
 			basedir="${carpeta.construccion}"/>
