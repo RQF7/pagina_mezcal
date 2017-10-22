@@ -23,6 +23,10 @@
   font-family: roboto-thin;
   src: url(../fuentes/roboto/Roboto-Thin.ttf);
 }
+@font-face {
+  font-family: niconne;
+  src: url(../fuentes/Niconne-Regular.ttf);
+}
 /* Estilos generales ******************************************************************************/
 body {
   font-family: roboto-regular;
@@ -70,7 +74,7 @@ body > div > div > div {
 body > div > div > div h1 {
   font-family: roboto-medium;
   font-size: 24pt;
-  color: #555;
+  color: #000;
 }
 body > div > div > div p {
   text-align: justify;
@@ -6540,8 +6544,6 @@ body > div:after,
 .modal-header:after,
 .modal-footer:before,
 .modal-footer:after,
-header > div:before,
-header > div:after,
 header > div > div:before,
 header > div > div:after,
 header > div > div > div:nth-child(2):before,
@@ -6568,7 +6570,6 @@ body > div:after,
 .panel-body:after,
 .modal-header:after,
 .modal-footer:after,
-header > div:after,
 header > div > div:after,
 header > div > div > div:nth-child(2):after,
 body > div > div > div > div:after {
@@ -6821,24 +6822,7 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 header > div {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-header > div > .navbar-header,
-header > div > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-@media (min-width: 768px) {
-  header > div > .navbar-header,
-  header > div > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
-  }
+  padding: 15px 60px 15px 60px;
 }
 header > div > div {
   margin-left: -15px;
@@ -6892,11 +6876,23 @@ header > div > div > div:nth-child(2) > div a {
   font-size: 18pt;
   color: #000;
 }
+header > div > div > div:nth-child(2) > div a:hover {
+  font-family: roboto-medium;
+  text-decoration: none;
+}
+header > div > div > div:nth-child(2) > div a:visited,
+header > div > div > div:nth-child(2) > div a:active {
+  text-decoration: none;
+}
+header > div > div > div:nth-child(2) > div a.activo {
+  font-family: roboto-regular;
+}
 header > div > div > div:last-child {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding: 0px;
 }
 @media (min-width: 992px) {
   header > div > div > div:last-child {
@@ -6912,15 +6908,15 @@ header > div > div > div:last-child p {
 header > div > div > div:last-child p a {
   color: #000;
 }
-header a:hover {
+header > div > div > div:last-child p a:hover {
   font-family: roboto-medium;
   text-decoration: none;
 }
-header a:visited,
-header a:active {
+header > div > div > div:last-child p a:visited,
+header > div > div > div:last-child p a:active {
   text-decoration: none;
 }
-header a.activo {
+header > div > div > div:last-child p a.activo {
   font-family: roboto-regular;
 }
 body {
@@ -6955,7 +6951,7 @@ body > div > div > div > div > div img {
 }
 body > div > div > div > div > div p {
   text-align: center;
-  line-height: 0.6;
+  line-height: 1.0;
   font-size: 10pt;
   font-family: roboto-medium;
 }

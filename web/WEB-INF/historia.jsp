@@ -15,23 +15,31 @@
         <div>
           <h1>Nuestra historia</h1>
           <p>
-            Duis occaecat laborum cillum adipisicing consequat aliquip ex exercitation qui tempor ad
-            dolore id amet eu. Cupidatat consectetur culpa dolor amet quis cupidatat sit velit
-            aliqua cupidatat dolor incididunt laboris. Commodo fugiat ullamco Lorem ad ad duis amet
-            qui occaecat aute et enim. Et proident ullamco qui in elit duis dolore aliquip excepteur
-            ut magna fugiat fugiat exercitation.
+            La presencia de Nuestro Mezcal en la Región Norte del Estado de Guerrero —y las zonas
+            colindantes de Morelos y México— se remonta a por lo menos seis generaciones de la
+            Familia Figueroa.
           </p>
           <p>
-            Et anim ad nisi do anim sit voluptate sint. Officia esse laborum pariatur ipsum est sint
-            cupidatat ad aliquip consequat commodo deserunt aute mollit. Nisi est sunt amet ipsum
-            dolore elit magna pariatur nostrud excepteur labore reprehenderit elit et ut ea ad.
-            Occaecat sit veniam in occaecat est incididunt consectetur sunt ex.
+            Compaginada durante muchos años con otras actividades —entre ellas la siembra de la
+            caña y la producción de aguardiente y ron—, la fabricación de mezcal es el resultado
+            de perpetuar las tradiciones locales, herederas de nuestras raíces prehispánicas, de
+            México y el universo del maguey y el pulque, y al mismo tiempo de España, de la
+            destilación y de los árabes.
           </p>
           <p>
-            Do tempor in fugiat dolore ut irure exercitation voluptate id aute voluptate deserunt
-            aute. Excepteur consequat minim dolor enim adipisicing duis laborum ut duis qui officia
-            nisi est. Ullamco ullamco elit reprehenderit ipsum sit nisi veniam. Cupidatat excepteur
-            dolor magna aliqua mollit minim dolore esse aliquip nulla anim.
+            Los hermanos Ricardo y Francisco, posteriormente Don Amado y Don Margarito, y en tiempos
+            más recientes, Don Ricardo, —siempre de la mano de Florentina, de Doña Isidora, Tía
+            Ema, Tía Gabina y Doña Ilse...— son algunos de nuestros antepasados, cuyo esfuerzo ha
+            transformado al mezcal, de ser una actividad complementaria, pasando por las épocas de
+            la persecución y las temibles inspecciones fiscales —que nos vistan desde la década de
+            1940—, por una cuidadosa y medida modernización, hasta convertirlo en nuestra pasión, y
+            en un sueño en constante proceso de materialización.
+          </p>
+          <p>
+            Hoy en día, Mezcal Amaxak es el heredero de dicho legado, en cuya historia se entretejen
+            nombres - como Mezcal Figueroa y Mezcal El Platanar -, y lugares - como El Milagro,
+            Pilcaya, El Despoblado o El Platanar -, perpetuando la tradición familiar, y siendo
+            elaborado desde, por lo menos, 1875, en la Fábrica de Mezcal El Refugio.
           </p>
         </div>
       </div>

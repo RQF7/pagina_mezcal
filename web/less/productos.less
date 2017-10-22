@@ -2,6 +2,29 @@
 @import "encabezado";
 
 body {
-  background-image: url("../imagenes/fondos/productos.fondo.jpg");
-  background-position: center center;
+  background-image: url("../imagenes/productos/joven38.producto.2.jpg");
+  background-position: right center;
+}
+
+body>div>div>div {
+  h1 {
+    margin-bottom: 2px;
+  }
+  &>div {
+    width: 250px;
+    p {
+      text-align: center;
+      margin-bottom: 1px;
+      margin-top: 1px;
+    }
+    &>p:nth-child(3) {
+      font-size: 18px;
+    }
+    &>p:nth-child(4), &>p:nth-child(5) {
+      font-size: 12px;
+    }
+  }
+  &>p:nth-child(3) {
+    margin-top: 10px;
+  }
 }

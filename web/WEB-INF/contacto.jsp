@@ -18,16 +18,22 @@
               <div>
                 <img src="imagenes/logos/logo.png"/>
                 <p>
+                  Domicilio conocido «Rancho El Refugio», carretera Tetipac-Pilcaya.
+                </p>
+                <p>
+                  El Platanar, Pilcaya, Guerrero, México.
+                </p>
+                <p>
                   info@mezcal.mx
                 </p>
               </div>
               <div>
                 <img src="imagenes/logos/logoEP.png"/>
                 <p>
-                  Benito Juárez No. 7, col. centro
+                  Benito Juárez No. 7, col. centro.
                 </p>
                 <p>
-                  Taxco de Alarcón, Guerrero
+                  Taxco de Alarcón, Guerrero, México.
                 </p>
                 <p>
                   +52-762-627-3291

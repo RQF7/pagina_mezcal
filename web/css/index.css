@@ -23,6 +23,10 @@
   font-family: roboto-thin;
   src: url(../fuentes/roboto/Roboto-Thin.ttf);
 }
+@font-face {
+  font-family: niconne;
+  src: url(../fuentes/Niconne-Regular.ttf);
+}
 /* Estilos generales ******************************************************************************/
 body {
   font-family: roboto-regular;
@@ -70,7 +74,7 @@ body > div > div > div {
 body > div > div > div h1 {
   font-family: roboto-medium;
   font-size: 24pt;
-  color: #555;
+  color: #000;
 }
 body > div > div > div p {
   text-align: justify;
@@ -6540,12 +6544,10 @@ body > div:after,
 .modal-header:after,
 .modal-footer:before,
 .modal-footer:after,
-header > div:before,
-header > div:after,
 header > div > div:before,
 header > div > div:after,
-header > div > div > div:last-child:before,
-header > div > div > div:last-child:after {
+header > div > div > div:nth-child(2):before,
+header > div > div > div:nth-child(2):after {
   content: " ";
   display: table;
 }
@@ -6566,9 +6568,8 @@ body > div:after,
 .panel-body:after,
 .modal-header:after,
 .modal-footer:after,
-header > div:after,
 header > div > div:after,
-header > div > div > div:last-child:after {
+header > div > div > div:nth-child(2):after {
   clear: both;
 }
 .center-block {
@@ -6818,24 +6819,7 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 header > div {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-header > div > .navbar-header,
-header > div > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-@media (min-width: 768px) {
-  header > div > .navbar-header,
-  header > div > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
-  }
+  padding: 15px 60px 15px 60px;
 }
 header > div > div {
   margin-left: -15px;
@@ -6856,7 +6840,7 @@ header > div > div > div:first-child {
 header > div > div > div:first-child img {
   height: 75px;
 }
-header > div > div > div:last-child {
+header > div > div > div:nth-child(2) {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -6866,12 +6850,12 @@ header > div > div > div:last-child {
   margin-top: 35px;
 }
 @media (min-width: 992px) {
-  header > div > div > div:last-child {
+  header > div > div > div:nth-child(2) {
     float: left;
     width: 66.66666667%;
   }
 }
-header > div > div > div:last-child > div {
+header > div > div > div:nth-child(2) > div {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -6879,26 +6863,71 @@ header > div > div > div:last-child > div {
   text-align: center;
 }
 @media (min-width: 992px) {
-  header > div > div > div:last-child > div {
+  header > div > div > div:nth-child(2) > div {
     float: left;
     width: 20%;
   }
 }
-header > div > div > div:last-child > div a {
+header > div > div > div:nth-child(2) > div a {
   font-family: roboto-light;
   font-size: 18pt;
   color: #000;
 }
-header > div > div > div:last-child > div a:hover,
-header > div > div > div:last-child > div a:visited,
-header > div > div > div:last-child > div a:active {
+header > div > div > div:nth-child(2) > div a:hover {
   font-family: roboto-medium;
   text-decoration: none;
 }
-header > div > div > div:last-child > div a.activo {
+header > div > div > div:nth-child(2) > div a:visited,
+header > div > div > div:nth-child(2) > div a:active {
+  text-decoration: none;
+}
+header > div > div > div:nth-child(2) > div a.activo {
+  font-family: roboto-regular;
+}
+header > div > div > div:last-child {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0px;
+}
+@media (min-width: 992px) {
+  header > div > div > div:last-child {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+header > div > div > div:last-child p {
+  text-align: right;
+  font-family: roboto-light;
+  font-size: 8pt;
+}
+header > div > div > div:last-child p a {
+  color: #000;
+}
+header > div > div > div:last-child p a:hover {
+  font-family: roboto-medium;
+  text-decoration: none;
+}
+header > div > div > div:last-child p a:visited,
+header > div > div > div:last-child p a:active {
+  text-decoration: none;
+}
+header > div > div > div:last-child p a.activo {
   font-family: roboto-regular;
 }
 body {
   background-image: url("../imagenes/fondos/inicio.fondo.jpg");
   background-position: right center;
+}
+body > div {
+  width: 60%;
+  margin-top: 60px;
+  margin-left: 100px;
+}
+body > div > p {
+  font-family: niconne;
+  font-size: 48pt;
+  color: #fff;
+  text-shadow: 2px 2px 10px #000;
 }

@@ -23,6 +23,10 @@
   font-family: roboto-thin;
   src: url(../fuentes/roboto/Roboto-Thin.ttf);
 }
+@font-face {
+  font-family: niconne;
+  src: url(../fuentes/Niconne-Regular.ttf);
+}
 /* Estilos generales ******************************************************************************/
 body {
   font-family: roboto-regular;
@@ -70,7 +74,7 @@ body > div > div > div {
 body > div > div > div h1 {
   font-family: roboto-medium;
   font-size: 24pt;
-  color: #555;
+  color: #000;
 }
 body > div > div > div p {
   text-align: justify;
@@ -6540,8 +6544,6 @@ body > div:after,
 .modal-header:after,
 .modal-footer:before,
 .modal-footer:after,
-header > div:before,
-header > div:after,
 header > div > div:before,
 header > div > div:after,
 header > div > div > div:nth-child(2):before,
@@ -6566,7 +6568,6 @@ body > div:after,
 .panel-body:after,
 .modal-header:after,
 .modal-footer:after,
-header > div:after,
 header > div > div:after,
 header > div > div > div:nth-child(2):after {
   clear: both;
@@ -6818,39 +6819,7 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 header > div {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-@media (min-width: 768px) {
-  header > div {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  header > div {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  header > div {
-    width: 1170px;
-  }
-}
-header > div > .navbar-header,
-header > div > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-@media (min-width: 768px) {
-  header > div > .navbar-header,
-  header > div > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
-  }
+  padding: 15px 60px 15px 60px;
 }
 header > div > div {
   margin-left: -15px;
@@ -6920,6 +6889,7 @@ header > div > div > div:last-child {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding: 0px;
 }
 @media (min-width: 992px) {
   header > div > div > div:last-child {
@@ -6947,6 +6917,27 @@ header > div > div > div:last-child p a.activo {
   font-family: roboto-regular;
 }
 body {
-  background-image: url("../imagenes/fondos/productos.fondo.jpg");
-  background-position: center center;
+  background-image: url("../imagenes/productos/joven38.producto.2.jpg");
+  background-position: right center;
+}
+body > div > div > div h1 {
+  margin-bottom: 2px;
+}
+body > div > div > div > div {
+  width: 250px;
+}
+body > div > div > div > div p {
+  text-align: center;
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+body > div > div > div > div > p:nth-child(3) {
+  font-size: 18px;
+}
+body > div > div > div > div > p:nth-child(4),
+body > div > div > div > div > p:nth-child(5) {
+  font-size: 12px;
+}
+body > div > div > div > p:nth-child(3) {
+  margin-top: 10px;
 }

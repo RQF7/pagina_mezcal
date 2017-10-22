@@ -4,9 +4,7 @@
 header {
   background-color: rgba(255, 255, 255, 0.7);
   &>div {
-    .container-fluid;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 60px 15px 60px;
     &>div {
       .make-row();
       &>div:first-child {
@@ -41,6 +39,7 @@ header {
       }
       &>div:last-child {
         .make-md-column(2);
+        padding: 0px;
         p {
           text-align: right;
           font-family: roboto-light;
