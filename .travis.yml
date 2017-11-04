@@ -1,0 +1,13 @@
+language: java
+email:
+  recipients:
+  - qf7.ricardo@gmail.com
+  on_success: never
+  on_failure: always
+deploy:
+  provider: heroku
+  api_key:
+    secure: af5T+MH1OKChI7GL4dqk3r1K6L+4FSEAfxnH/4iGECLR5uIpRcjoqr/JZbxl96lxhSAhEibkpv/kF0lU2u5krgK1MZzEjl5R4FUvxT+TQsMdpaED73FgrF1ieAhERIa0Adk23zzvYEQjAQRYf55SRO0Rh9gTjHKbKuhm4BA/s1AQj+HhFYJjqcPXJzyGBOpDYWEQBYYjWhzlyH8mi482dSwBG+4oOFZWRDrx+/LIc6N5YVx/JO57U7AbjYnznrE65xyY1ZT7fMsVXB+9yx5lpmFEn4jUAEnpZQdsZQO22j21j9k1pMlzOyvhwOuRZFV8XiExkzJqW5tXwDnbZc413BiE2n/QhH8FKDFbV/PDk8UBiCzM19i9K6lA5ORQCChYr4MCyU5mKbH43r3RiYZaZSKzmEyk2FWD9lTGJyMgAkM7BaNh2D/xOCoc3WCz1mEfXZtRx7g1PU6gwXPfsa3Hwmr2aop4e5hMc+SxDkA1k+z6O/wShJe50iFwZLs7zYfrjvMIttoza/cBp5sw9ucv0EbMSL5Hyy0co0UshAmGHQvYkKz0Z5ZjywU65CU0hPnJWB0gOF5FUxYv+eUNdMa5XKQcJKlbNxtHCyyHHezWzYgXpVfLqNA7ZHbtybGJ3NknAe2fcWmuu5Lcg8ClxVo3sj/p4vVUHeMLGK6coOMzJO0=
+  app: mezcalamaxak
+  on:
+    repo: RQF7/pagina_mezcal

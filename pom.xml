@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                        http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!--
+      pom.xml
+      Archivo POM; entrada de maven.
+      vim: set softtabstop=2 shiftwidth=2 expandtab cc=100:
+  -->
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>MezcalAmaxak</groupId>
+  <artifactId>MezcalAmaxak</artifactId>
+  <packaging>war</packaging>
+  <version>1.0.0</version>
+
+  <!-- Plugins para la construcción ============================================================-->
+
+  <build>
+
+    <!-- Sobreescritura de propiedades del súper POM -->
+    <directory>codigo_objeto</directory>
+    <outputDirectory>codigo_objeto</outputDirectory>
+    <sourceDirectory>codigo_fuente/</sourceDirectory>
+    <testSourceDirectory>codigo_fuente/</testSourceDirectory>
+
+    <plugins>
+
+      <!--
+          Maven compiler plugin
+          Compila el código fuente de java.
+          source y target: versiones de jdk origen y destino.
+      -->
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+
+      <!--
+          Maven war plugin
+          Genera el archivo war con la aplicación empaquetada.
+          warSourceDirectory: Archivos web estáticos (html, jsp, css, js, etc).
+      -->
+
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <warSourceDirectory>web</warSourceDirectory>
+          <outputDirectory>distribucion</outputDirectory>
+        </configuration>
+      </plugin>
+
+      <!--
+          Mave dependency plugin
+          Mantiene los jars de las dependencias en «target/dependency». Creo que va un poco en
+          contra de la filosofía inicial de maven, pues no se comparten las dependencias entre
+          distintos proyectos; sin embargo es necesario para poder desplegar la aplicación
+          en Heroku.
+          Descarga el web app runner que ocupa Heroku para desplegar la aplicación.
+      -->
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.0.1</version>
+        <configuration>
+          <outputDirectory>distribucion/dependencias</outputDirectory>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals><goal>copy</goal></goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>com.github.jsimone</groupId>
+                  <artifactId>webapp-runner</artifactId>
+                  <version>8.5.23.0</version>
+                  <destFileName>webapp-runner.jar</destFileName>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals><goal>copy-dependencies</goal></goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+  <!-- Dependencias ============================================================================-->
+
+  <dependencies>
+
+    <!-- Javaee web api: servlets, jsp, jsf, etc. -->
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-web-api</artifactId>
+      <version>7.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+  <!-- Configuraciones =========================================================================-->
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+</project>
