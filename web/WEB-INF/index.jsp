@@ -7,6 +7,9 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <link rel="stylesheet" href="css/index.css"/>
+    <% if (request.getAttribute("sin_bandera_edad") != null) { %>
+      <link rel="stylesheet" href="css/confirmacion_edad.css"/>
+    <% } %>
   </head>
   <body>
     <%@include file="componentes/encabezado.jsp"%>
@@ -15,5 +18,6 @@
         "Cinco generaciones de tradición mezcalera nos respaldan..."
       </p>
     </div>
+    <%@include file="componentes/confirmacion_edad.jsp"%>
   </body>
 </html>

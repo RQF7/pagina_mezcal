@@ -1,0 +1,114 @@
+@import "variables.less";
+@import (reference) "bootstrap/bootstrap.less";
+
+html, body {
+  font-family: roboto-regular;
+	max-height: 100%;
+	overflow-y: hidden;
+}
+
+#confirmacion {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-image: url('../imagenes/fondos/edad.fondo.jpg');
+	z-index: 2000;
+	.container-fluid;
+
+	#confirmacion-contenedor {
+
+		img {
+			margin-top: 80px;
+			margin-bottom: 60px;
+			width: 352.058px;
+			.center-block;
+		}
+
+		#confirmacion-pregunta {
+			.container;
+			margin-top: 18px;
+			margin-bottom: 33px;
+
+			p {
+				color: black;
+				font-size: 20.169pt;
+				text-align: center;
+			}
+		}
+
+		#confirmacion-respuesta {
+			.container;
+			margin-top: 33px;
+			margin-bottom: 37px;
+
+			div {
+				display: inline-block;
+				width: 48%;
+
+				&:first-child {
+					padding-right: 50px;
+					button {
+						float: right;
+						text-align: right;
+					}
+				}
+
+				&:last-child {
+					padding-left: 50px;
+					button {
+						float: left;
+						text-align: left;
+					}
+				}
+			}
+
+			button {
+				border: 0px;
+				background-color: transparent;
+				color: black;
+				font-size: 54pt;
+
+				&:focus {
+					outline: 0px;
+				}
+			}
+		}
+
+		#confirmacion-idiomas {
+			margin-top: 37px;
+			max-width: 600px;
+			min-width: 200px;
+			margin-left: auto;
+			margin-right: auto;
+
+			p {
+				font-size: 17.025pt;
+				text-align: center;
+
+				span {
+					border-right: 1px solid #222;
+				}
+
+				button {
+					border: 0px;
+					padding: 0px;
+					background-color: transparent;
+					padding-right: 10px;
+					padding-left: 10px;
+					margin: 5px 0px 5px 0px;
+
+					&:focus {
+						outline: 0px;
+					}
+				}
+
+				span:last-child {
+					border-right: 0px;
+          padding-left: 5px;
+				}
+			}
+		}
+	}
+}

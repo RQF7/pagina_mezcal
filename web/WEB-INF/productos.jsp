@@ -7,6 +7,9 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <link rel="stylesheet" href="css/productos.css"/>
+    <% if (request.getAttribute("sin_bandera_edad") != null) { %>
+      <link rel="stylesheet" href="css/confirmacion_edad.css"/>
+    <% } %>
   </head>
   <body>
     <%@include file="componentes/encabezado.jsp"%>
@@ -58,5 +61,6 @@
       <li data-target="#carousel-example-generic" data-slide-to="1"></li>
       <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     </ol>
+    <%@include file="componentes/confirmacion_edad.jsp"%>
   </body>
 </html>

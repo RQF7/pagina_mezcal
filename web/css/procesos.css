@@ -36,25 +36,25 @@ body {
   background-size: cover;
 }
 /* Estilos de páginas con recuadro informativo ****************************************************/
-body > div {
+body > div:nth-child(2) {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-body > div > .navbar-header,
-body > div > .navbar-collapse {
+body > div:nth-child(2) > .navbar-header,
+body > div:nth-child(2) > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
 }
 @media (min-width: 768px) {
-  body > div > .navbar-header,
-  body > div > .navbar-collapse {
+  body > div:nth-child(2) > .navbar-header,
+  body > div:nth-child(2) > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
   }
 }
-body > div > div > div {
+body > div:nth-child(2) > div > div {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -66,17 +66,17 @@ body > div > div > div {
   background-color: rgba(255, 255, 255, 0.7);
 }
 @media (min-width: 992px) {
-  body > div > div > div {
+  body > div:nth-child(2) > div > div {
     float: left;
     width: 37.5%;
   }
 }
-body > div > div > div h1 {
+body > div:nth-child(2) > div > div h1 {
   font-family: roboto-medium;
   font-size: 24pt;
   color: #000;
 }
-body > div > div > div p {
+body > div:nth-child(2) > div > div p {
   text-align: justify;
   line-height: 1.0;
 }
@@ -6512,8 +6512,8 @@ button.close {
 }
 .clearfix:before,
 .clearfix:after,
-body > div:before,
-body > div:after,
+body > div:nth-child(2):before,
+body > div:nth-child(2):after,
 .dl-horizontal dd:before,
 .dl-horizontal dd:after,
 .container:before,
@@ -6552,7 +6552,7 @@ header > div > div > div:nth-child(2):after {
   display: table;
 }
 .clearfix:after,
-body > div:after,
+body > div:nth-child(2):after,
 .dl-horizontal dd:after,
 .container:after,
 .container-fluid:after,
@@ -6920,6 +6920,6 @@ body {
   background-image: url("../imagenes/fondos/procesos.fondo.jpg");
   background-position: center center;
 }
-body > div > div > div {
+body > div:nth-child(2) > div > div {
   float: right;
 }

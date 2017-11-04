@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 public class Controlador extends HttpServlet {
 
@@ -14,6 +15,11 @@ public class Controlador extends HttpServlet {
 
     String informacion = peticion.getServletPath();
     informacion = (informacion == null) ? "/inicio" : informacion;
+
+    HttpSession sesion = peticion.getSession();
+    if (sesion.getAttribute("bandera_edad") == null) {
+      peticion.setAttribute("sin_bandera_edad", "");
+    }
 
     String rutaDestino = "";
     switch (informacion) {
