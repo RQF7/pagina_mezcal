@@ -1,9 +1,4 @@
 language: java
-email:
-  recipients:
-  - qf7.ricardo@gmail.com
-  on_success: never
-  on_failure: always
 deploy:
   provider: heroku
   api_key:
