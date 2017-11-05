@@ -41,6 +41,10 @@ body {
   left: 0px;
   right: 0px;
   background-image: url('../imagenes/fondos/edad.fondo.jpg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   z-index: 2000;
   margin-right: auto;
   margin-left: auto;

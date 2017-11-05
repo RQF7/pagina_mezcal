@@ -97,6 +97,29 @@
         </executions>
       </plugin>
 
+      <!--plugin>
+        <groupId>org.lesscss</groupId>
+        <artifactId>lesscss-maven-plugin</artifactId>
+        <version>1.7.0.1.1</version>
+        <configuration>
+          <sourceDirectory>web/less</sourceDirectory>
+          <outputDirectory>web/css</outputDirectory>
+          <excludes>
+            <exclude>encabezado.less</exclude>
+            <exclude>general.less</exclude>
+            <exclude>variables.less</exclude>
+            <exclude>bootstrap/**/*.less</exclude>
+          </excludes>
+        </configuration>
+        <executions>
+          <execution>
+          <goals>
+            <goal>compile</goal>
+          </goals>
+          </execution>
+        </executions>
+      </plugin-->
+
     </plugins>
 
   </build>

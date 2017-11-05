@@ -10,6 +10,37 @@
   		$('[data-toggle="tooltip"]').tooltip()
 	})
 
+	/* Acción afirmativa */
+	function afirmativo ()
+	{
+		enviar_confirmacion();
+		$('#confirmacion').slideUp({
+			duration: 1000,
+			easing: 'easeOutExpo'
+		});
+	}
+
+	/* Acción negativa */
+	function negativo ()
+	{
+
+	}
+
+	/* Envía al servidor confirmación de edad */
+	function enviar_confirmacion ()
+	{
+		var peticion_http = new XMLHttpRequest();
+		peticion_http.onreadystatechange = function () {
+			if (peticion_http.readyState === XMLHttpRequest.DONE) {
+				if (peticion_http.status !== 200) {
+        	console.log('Error al establecer confirmación de edad');
+    		}
+    	}
+		};
+		peticion_http.open('GET', '/confirmar_edad', true);
+		peticion_http.send();
+	}
+
 	function reestablecer_scroll ()
 	{
 		var body = document.getElementsByTagName("body")[0];

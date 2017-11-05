@@ -7,9 +7,7 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <link rel="stylesheet" href="css/historia.css"/>
-    <% if (request.getAttribute("sin_bandera_edad") != null) { %>
-      <link rel="stylesheet" href="css/confirmacion_edad.css"/>
-    <% } %>
+    <%@include file="componentes/bibliotecas.jsp"%>
   </head>
   <body>
     <%@include file="componentes/encabezado.jsp"%>

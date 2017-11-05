@@ -6878,11 +6878,19 @@ header > div > div > div:nth-child(2) > div a:hover {
   text-decoration: none;
 }
 header > div > div > div:nth-child(2) > div a:visited,
-header > div > div > div:nth-child(2) > div a:active {
+header > div > div > div:nth-child(2) > div a:active,
+header > div > div > div:nth-child(2) > div a:focus {
   text-decoration: none;
 }
 header > div > div > div:nth-child(2) > div a.activo {
   font-family: roboto-regular;
+  text-decoration: none;
+}
+header > div > div > div:nth-child(2) > div a.activo:hover,
+header > div > div > div:nth-child(2) > div a.activo:visited,
+header > div > div > div:nth-child(2) > div a.activo:active,
+header > div > div > div:nth-child(2) > div a.activo:focus {
+  text-decoration: none;
 }
 header > div > div > div:last-child {
   position: relative;

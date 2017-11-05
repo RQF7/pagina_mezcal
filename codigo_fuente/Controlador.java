@@ -17,6 +17,12 @@ public class Controlador extends HttpServlet {
     informacion = (informacion == null) ? "/inicio" : informacion;
 
     HttpSession sesion = peticion.getSession();
+    if (informacion.equals("/confirmar_edad")) {
+      sesion.setAttribute("bandera_edad", "");
+      respuesta.setStatus(200);
+      return;
+    }
+
     if (sesion.getAttribute("bandera_edad") == null) {
       peticion.setAttribute("sin_bandera_edad", "");
     }
