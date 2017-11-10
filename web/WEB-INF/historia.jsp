@@ -18,7 +18,7 @@
           <p>
             La presencia de Nuestro Mezcal en la Región Norte del Estado de Guerrero —y las zonas
             colindantes de Morelos y México— se remonta a por lo menos seis generaciones de la
-            Familia Figueroa.
+            <i>Familia Figueroa</i>.
           </p>
           <p>
             Compaginada durante muchos años con otras actividades —entre ellas la siembra de la
@@ -37,10 +37,11 @@
             en un sueño en constante proceso de materialización.
           </p>
           <p>
-            Hoy en día, Mezcal Amaxak es el heredero de dicho legado, en cuya historia se entretejen
-            nombres - como Mezcal Figueroa y Mezcal El Platanar -, y lugares - como El Milagro,
-            Pilcaya, El Despoblado o El Platanar -, perpetuando la tradición familiar, y siendo
-            elaborado desde, por lo menos, 1875, en la Fábrica de Mezcal El Refugio.
+            Hoy en día, <b>Mezcal Amaxak</b> es el heredero de dicho legado, en cuya historia se
+            entretejen nombres —como <i>Mezcal Figueroa</i> y <i>Mezcal El Platanar</i>—, y
+            lugares —como El Milagro, Pilcaya, El Despoblado o El Platanar—, perpetuando la
+            tradición familiar, y siendo elaborado desde, por lo menos, 1875, en la Fábrica de
+            Mezcal <i>El Refugio</i>.
           </p>
         </div>
       </div>

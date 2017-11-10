@@ -6960,6 +6960,7 @@ header > div > div > div:last-child p a.activo {
   bottom: 0px;
   left: 0px;
   right: 0px;
+  z-index: -998;
 }
 #carrusel_fondo > div {
   position: absolute;
@@ -6967,6 +6968,7 @@ header > div > div > div:last-child p a.activo {
   bottom: 0px;
   left: 0px;
   right: 0px;
+  z-index: -999;
 }
 #carrusel_fondo > div > div {
   position: absolute;
