@@ -1,0 +1,23 @@
+{
+  "name": "pagina_mezcal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "less": "^2.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RQF7/pagina_mezcal.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RQF7/pagina_mezcal/issues"
+  },
+  "homepage": "https://github.com/RQF7/pagina_mezcal#readme"
+}

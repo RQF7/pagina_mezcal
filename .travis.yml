@@ -6,3 +6,5 @@ deploy:
   app: mezcalamaxak
   on:
     repo: RQF7/pagina_mezcal
+install:
+  - npm install
