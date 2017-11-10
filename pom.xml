@@ -97,28 +97,30 @@
         </executions>
       </plugin>
 
-      <!--plugin>
-        <groupId>org.lesscss</groupId>
-        <artifactId>lesscss-maven-plugin</artifactId>
-        <version>1.7.0.1.1</version>
-        <configuration>
-          <sourceDirectory>web/less</sourceDirectory>
-          <outputDirectory>web/css</outputDirectory>
-          <excludes>
-            <exclude>encabezado.less</exclude>
-            <exclude>general.less</exclude>
-            <exclude>variables.less</exclude>
-            <exclude>bootstrap/**/*.less</exclude>
-          </excludes>
-        </configuration>
+      <!--
+          Exec maven plugin
+          Permite ejecutar comándos en distintas fases de la construcción:
+          * exec-make: ejecuta «make».
+      -->
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.5.0</version>
         <executions>
           <execution>
-          <goals>
-            <goal>compile</goal>
-          </goals>
+            <id>exec-make</id>
+            <phase>generate-sources</phase>
+            <configuration>
+              <executable>make</executable>
+            </configuration>
+            <goals>
+              <goal>exec</goal>
+            </goals>
           </execution>
         </executions>
-      </plugin-->
+      </plugin>
+
 
     </plugins>
 

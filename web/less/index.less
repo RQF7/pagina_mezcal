@@ -1,9 +1,45 @@
 @import "general";
 @import "encabezado";
 
-body {
+.posicion_absoluta {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.fondos {
+  .posicion_absoluta;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1000;
+}
+
+#fondo1 {
   background-image: url("../imagenes/fondos/inicio.fondo.jpg");
   background-position: right center;
+}
+
+#fondo2 {
+  background-image: url("../imagenes/fondos/historia.fondo.jpg");
+  background-position: right center;
+}
+
+#fondo3 {
+  background-image: url("../imagenes/fondos/contacto.fondo.jpg");
+  background-position: right center;
+}
+
+#carrusel_fondo {
+  .posicion_absoluta;
+  &>div {
+    .posicion_absoluta;
+    &>div {
+      .fondos;
+    }
+  }
 }
 
 body>div:nth-child(2) {
