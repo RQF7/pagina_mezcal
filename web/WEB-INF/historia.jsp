@@ -10,8 +10,11 @@
     <%@include file="componentes/bibliotecas.jsp"%>
   </head>
   <body>
+    <!-- Encabezado -->
     <%@include file="componentes/encabezado.jsp"%>
-    <div>
+
+    <!-- Contenido de página -->
+    <div class="recuadro_de_texto">
       <div>
         <div>
           <h1>Nuestra historia</h1>
@@ -46,6 +49,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Confirmación de edad -->
     <%@include file="componentes/confirmacion_edad.jsp"%>
   </body>
 </html>

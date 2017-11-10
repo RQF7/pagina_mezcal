@@ -46,9 +46,50 @@ body {
   background-size: cover;
 }
 
+.posicion_absoluta {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.fondos {
+  .posicion_absoluta;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1000;
+}
+
+.derecha {
+  float: right;
+}
+
+#carrusel_fondo {
+  .posicion_absoluta;
+  z-index: -998;
+  &>ol {
+    bottom: 0px;
+    & .active {
+      background-color: @gris-fondo;
+    }
+    &>li {
+      border-color: @gris-fondo;
+    }
+  }
+  &>div {
+    .posicion_absoluta;
+    z-index: -999;
+    &>div {
+      .fondos;
+    }
+  }
+}
+
 /* Estilos de páginas con recuadro informativo ****************************************************/
 
-body>div:nth-child(2) {
+.recuadro_de_texto {
   .container-fluid;
   &>div {
     &>div {
@@ -57,7 +98,7 @@ body>div:nth-child(2) {
       margin-left: 50px;
       margin-right: 50px;
       padding: 0px 30px 30px 30px;
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: @gris-fondo;
       h1 {
         font-family: roboto-medium;
         font-size: 24pt;

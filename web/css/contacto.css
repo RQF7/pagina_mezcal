@@ -35,26 +35,83 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+.posicion_absoluta {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.fondos {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1000;
+}
+.derecha {
+  float: right;
+}
+#carrusel_fondo {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -998;
+}
+#carrusel_fondo > ol {
+  bottom: 0px;
+}
+#carrusel_fondo > ol .active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#carrusel_fondo > ol > li {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+#carrusel_fondo > div {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -999;
+}
+#carrusel_fondo > div > div {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1000;
+}
 /* Estilos de páginas con recuadro informativo ****************************************************/
-body > div:nth-child(2) {
+.recuadro_de_texto {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-body > div:nth-child(2) > .navbar-header,
-body > div:nth-child(2) > .navbar-collapse {
+.recuadro_de_texto > .navbar-header,
+.recuadro_de_texto > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
 }
 @media (min-width: 768px) {
-  body > div:nth-child(2) > .navbar-header,
-  body > div:nth-child(2) > .navbar-collapse {
+  .recuadro_de_texto > .navbar-header,
+  .recuadro_de_texto > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
   }
 }
-body > div:nth-child(2) > div > div {
+.recuadro_de_texto > div > div {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -66,17 +123,17 @@ body > div:nth-child(2) > div > div {
   background-color: rgba(255, 255, 255, 0.7);
 }
 @media (min-width: 992px) {
-  body > div:nth-child(2) > div > div {
+  .recuadro_de_texto > div > div {
     float: left;
     width: 37.5%;
   }
 }
-body > div:nth-child(2) > div > div h1 {
+.recuadro_de_texto > div > div h1 {
   font-family: roboto-medium;
   font-size: 24pt;
   color: #000;
 }
-body > div:nth-child(2) > div > div p {
+.recuadro_de_texto > div > div p {
   text-align: justify;
   line-height: 1.0;
 }
@@ -6512,8 +6569,8 @@ button.close {
 }
 .clearfix:before,
 .clearfix:after,
-body > div:nth-child(2):before,
-body > div:nth-child(2):after,
+.recuadro_de_texto:before,
+.recuadro_de_texto:after,
 .dl-horizontal dd:before,
 .dl-horizontal dd:after,
 .container:before,
@@ -6554,7 +6611,7 @@ body > div:nth-child(2) > div > div > div:after {
   display: table;
 }
 .clearfix:after,
-body > div:nth-child(2):after,
+.recuadro_de_texto:after,
 .dl-horizontal dd:after,
 .container:after,
 .container-fluid:after,
