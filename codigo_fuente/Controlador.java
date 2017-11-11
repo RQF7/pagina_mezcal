@@ -13,9 +13,9 @@ public class Controlador extends HttpServlet {
   protected void doGet(HttpServletRequest peticion, HttpServletResponse respuesta)
       throws ServletException, IOException {
 
-    String informacion = peticion.getPathInfo();
+    String informacion = peticion.getServletPath();
     System.out.println(informacion);
-    System.out.println(peticion.getServletPath());
+    System.out.println(peticion.getPathInfo());
     informacion = (informacion == null) ? "/inicio" : informacion;
 
     HttpSession sesion = peticion.getSession();
