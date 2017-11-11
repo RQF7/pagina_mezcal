@@ -169,9 +169,13 @@ body {
   background-color: transparent;
   color: black;
   font-size: 54pt;
+  font-family: roboto-light;
 }
 #confirmacion #confirmacion-contenedor .confirmacion-respuesta button:focus {
   outline: 0px;
+}
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta button:hover {
+  font-family: roboto-regular;
 }
 #confirmacion #confirmacion-contenedor #confirmacion-idiomas {
   margin-top: 37px;
@@ -181,6 +185,7 @@ body {
   margin-right: auto;
 }
 #confirmacion #confirmacion-contenedor #confirmacion-idiomas p {
+  font-family: roboto-regular;
   font-size: 17.025pt;
   text-align: center;
 }
@@ -197,6 +202,9 @@ body {
 }
 #confirmacion #confirmacion-contenedor #confirmacion-idiomas p button:focus {
   outline: 0px;
+}
+#confirmacion #confirmacion-contenedor #confirmacion-idiomas p button.activo {
+  font-family: roboto-medium;
 }
 #confirmacion #confirmacion-contenedor #confirmacion-idiomas p span:last-child {
   border-right: 0px;

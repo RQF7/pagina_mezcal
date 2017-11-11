@@ -73,9 +73,14 @@ html, body {
 				background-color: transparent;
 				color: black;
 				font-size: 54pt;
+				font-family: roboto-light;
 
 				&:focus {
 					outline: 0px;
+				}
+
+				&:hover {
+					font-family: roboto-regular;
 				}
 			}
 		}
@@ -88,6 +93,7 @@ html, body {
 			margin-right: auto;
 
 			p {
+				font-family: roboto-regular;
 				font-size: 17.025pt;
 				text-align: center;
 
@@ -105,6 +111,10 @@ html, body {
 
 					&:focus {
 						outline: 0px;
+					}
+
+					&.activo {
+						font-family: roboto-medium;
 					}
 				}
 
