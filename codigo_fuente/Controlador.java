@@ -13,10 +13,11 @@ public class Controlador extends HttpServlet {
   protected void doGet(HttpServletRequest peticion, HttpServletResponse respuesta)
       throws ServletException, IOException {
 
+    System.out.println("PATH: " + peticion.getServletPath());
+    System.out.println("INFO: " + peticion.getPathInfo());
+
     String informacion = peticion.getServletPath();
-    System.out.println(informacion);
-    System.out.println(peticion.getPathInfo());
-    informacion = (informacion == null) ? "/inicio" : informacion;
+    informacion = (informacion.equals("/")) ? "/inicio" : informacion;
 
     HttpSession sesion = peticion.getSession();
     if (informacion.equals("/confirmar_edad")) {
@@ -47,6 +48,7 @@ public class Controlador extends HttpServlet {
         rutaDestino = "/contacto.jsp";
         break;
       default:
+        System.out.println("Error: " + informacion);
         respuesta.sendError(HttpServletResponse.SC_NOT_FOUND);
         return;
     }
