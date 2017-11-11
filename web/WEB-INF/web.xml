@@ -13,9 +13,46 @@
 
   <!-- URLs disponibles -->
 
+  <servlet>
+    <servlet-name>controlador</servlet-name>
+    <servlet-class>Controlador</servlet-class>
+  </servlet>
+
+  <!-- URLs disponibles -->
+
   <servlet-mapping>
     <servlet-name>controlador</servlet-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>controlador</servlet-name>
+    <url-pattern>/inicio</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>controlador</servlet-name>
+    <url-pattern>/historia</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>controlador</servlet-name>
+    <url-pattern>/productos</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>controlador</servlet-name>
+    <url-pattern>/procesos</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>controlador</servlet-name>
+    <url-pattern>/contacto</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>controlador</servlet-name>
+    <url-pattern>/confirmar_edad</url-pattern>
   </servlet-mapping>
 
   <!-- Archivos estáticos disponibles -->
