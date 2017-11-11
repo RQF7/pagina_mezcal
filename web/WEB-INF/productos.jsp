@@ -11,7 +11,7 @@
   </head>
   <body>
     <%@include file="componentes/encabezado.jsp"%>
-    <div>
+    <div class="recuadro_de_texto">
       <div>
         <div>
           <h1>AMAXAK JOVEN</h1>
