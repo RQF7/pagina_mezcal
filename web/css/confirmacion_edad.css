@@ -16,16 +16,16 @@
 }
 #confirmacion:before,
 #confirmacion:after,
-#confirmacion #confirmacion-contenedor #confirmacion-pregunta:before,
-#confirmacion #confirmacion-contenedor #confirmacion-pregunta:after,
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta:before,
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta:after {
+#confirmacion #confirmacion-contenedor .confirmacion-pregunta:before,
+#confirmacion #confirmacion-contenedor .confirmacion-pregunta:after,
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta:before,
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta:after {
   content: " ";
   display: table;
 }
 #confirmacion:after,
-#confirmacion #confirmacion-contenedor #confirmacion-pregunta:after,
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta:after {
+#confirmacion #confirmacion-contenedor .confirmacion-pregunta:after,
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta:after {
   clear: both;
 }
 html,
@@ -71,7 +71,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-#confirmacion #confirmacion-contenedor #confirmacion-pregunta {
+#confirmacion #confirmacion-contenedor .confirmacion-pregunta {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -80,38 +80,38 @@ body {
   margin-bottom: 33px;
 }
 @media (min-width: 768px) {
-  #confirmacion #confirmacion-contenedor #confirmacion-pregunta {
+  #confirmacion #confirmacion-contenedor .confirmacion-pregunta {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  #confirmacion #confirmacion-contenedor #confirmacion-pregunta {
+  #confirmacion #confirmacion-contenedor .confirmacion-pregunta {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  #confirmacion #confirmacion-contenedor #confirmacion-pregunta {
+  #confirmacion #confirmacion-contenedor .confirmacion-pregunta {
     width: 1170px;
   }
 }
-#confirmacion #confirmacion-contenedor #confirmacion-pregunta > .navbar-header,
-#confirmacion #confirmacion-contenedor #confirmacion-pregunta > .navbar-collapse {
+#confirmacion #confirmacion-contenedor .confirmacion-pregunta > .navbar-header,
+#confirmacion #confirmacion-contenedor .confirmacion-pregunta > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
 }
 @media (min-width: 768px) {
-  #confirmacion #confirmacion-contenedor #confirmacion-pregunta > .navbar-header,
-  #confirmacion #confirmacion-contenedor #confirmacion-pregunta > .navbar-collapse {
+  #confirmacion #confirmacion-contenedor .confirmacion-pregunta > .navbar-header,
+  #confirmacion #confirmacion-contenedor .confirmacion-pregunta > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
   }
 }
-#confirmacion #confirmacion-contenedor #confirmacion-pregunta p {
+#confirmacion #confirmacion-contenedor .confirmacion-pregunta p {
   color: black;
   font-size: 20.169pt;
   text-align: center;
 }
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta {
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -120,57 +120,57 @@ body {
   margin-bottom: 37px;
 }
 @media (min-width: 768px) {
-  #confirmacion #confirmacion-contenedor #confirmacion-respuesta {
+  #confirmacion #confirmacion-contenedor .confirmacion-respuesta {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  #confirmacion #confirmacion-contenedor #confirmacion-respuesta {
+  #confirmacion #confirmacion-contenedor .confirmacion-respuesta {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  #confirmacion #confirmacion-contenedor #confirmacion-respuesta {
+  #confirmacion #confirmacion-contenedor .confirmacion-respuesta {
     width: 1170px;
   }
 }
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta > .navbar-header,
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta > .navbar-collapse {
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta > .navbar-header,
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
 }
 @media (min-width: 768px) {
-  #confirmacion #confirmacion-contenedor #confirmacion-respuesta > .navbar-header,
-  #confirmacion #confirmacion-contenedor #confirmacion-respuesta > .navbar-collapse {
+  #confirmacion #confirmacion-contenedor .confirmacion-respuesta > .navbar-header,
+  #confirmacion #confirmacion-contenedor .confirmacion-respuesta > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
   }
 }
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta div {
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta div {
   display: inline-block;
   width: 48%;
 }
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta div:first-child {
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta div:first-child {
   padding-right: 50px;
 }
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta div:first-child button {
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta div:first-child button {
   float: right;
   text-align: right;
 }
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta div:last-child {
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta div:last-child {
   padding-left: 50px;
 }
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta div:last-child button {
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta div:last-child button {
   float: left;
   text-align: left;
 }
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta button {
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta button {
   border: 0px;
   background-color: transparent;
   color: black;
   font-size: 54pt;
 }
-#confirmacion #confirmacion-contenedor #confirmacion-respuesta button:focus {
+#confirmacion #confirmacion-contenedor .confirmacion-respuesta button:focus {
   outline: 0px;
 }
 #confirmacion #confirmacion-contenedor #confirmacion-idiomas {

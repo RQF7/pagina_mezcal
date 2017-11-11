@@ -55,46 +55,81 @@
 <div id="confirmacion">
 	<div id="confirmacion-contenedor">
 		<img src="imagenes/logos/logo.png" alt="Logo de Amaxak"/>
+
 		<div id="confirmacion-textos">
 
-			<div id="confirmacion-pregunta">
-				<p id="confirmacion-pregunta-texto">
-				  ¿Tiene usted edad para beber alcohol en su país?
-				</p>
-			</div>
+			<div id="carrusel_contenido" class="carousel slide"
+        data-ride="carousel" data-pause=null data-interval=false>
 
-			<div id="confirmacion-respuesta">
-				<div>
-					<button type="button" id="confirmacion-respuesta-1"
-						onclick="afirmativo()">
-						Sí
-					</button>
+	      <div class="carousel-inner" role="listbox">
+	        <div id="espaniol" class="item active">
+
+						<div class="confirmacion-pregunta">
+							<p class="confirmacion-pregunta-texto">
+							  ¿Tiene usted edad para beber alcohol en su país?
+							</p>
+						</div>
+						<div class="confirmacion-respuesta">
+							<div>
+								<button type="button" class="confirmacion-respuesta-1"
+									onclick="afirmativo()">
+									Sí
+								</button>
+							</div>
+							<div>
+								<button type="button" class="confirmacion-respuesta-2"
+									onclick="negativo()">
+									No
+								</button>
+							</div>
+						</div>
+
+					</div>
+					<div id="ingles" class="item">
+
+						<div class="confirmacion-pregunta">
+							<p class="confirmacion-pregunta-texto">
+							  Are you old enough to drink alcohol in your country?
+							</p>
+						</div>
+						<div class="confirmacion-respuesta">
+							<div>
+								<button type="button" class="confirmacion-respuesta-1"
+									onclick="afirmativo()">
+									Yes
+								</button>
+							</div>
+							<div>
+								<button type="button" class="confirmacion-respuesta-2"
+									onclick="negativo()">
+									No
+								</button>
+							</div>
+						</div>
+
+					</div>
 				</div>
-				<div>
-					<button type="button" id="confirmacion-respuesta-2"
-						onclick="negativo()">
-						No
-					</button>
+
+				<div id="confirmacion-idiomas">
+					<p id="confirmacion-idiomas-texto">
+						<span>
+							<button type= "button" class="activo" data-toggle="tooltip"
+								data-placement="bottom" data-trigger="hover" title="Español"
+								onclick="cambiar_idioma()"
+								data-target="#carrusel_contenido" data-slide-to="0">
+								Español </button>
+						</span>
+	          <span>
+							<button type= "button" class="activo" data-toggle="tooltip"
+								data-placement="bottom" data-trigger="hover" title="Inglés"
+								onclick="cambiar_idioma()"
+								data-target="#carrusel_contenido" data-slide-to="1">
+								English </button>
+						</span>
+					</p>
 				</div>
-			</div>
 
-			<div id="confirmacion-idiomas">
-				<p id="confirmacion-idiomas-texto">
-					<span>
-						<button type= "button" class="activo" data-toggle="tooltip"
-							data-placement="bottom" data-trigger="hover" title="Español"
-							onclick="cambiar_idioma()">
-							Español </button>
-					</span>
-          <span>
-						<button type= "button" class="activo" data-toggle="tooltip"
-							data-placement="bottom" data-trigger="hover" title="Inglés"
-							onclick="cambiar_idioma()">
-							English </button>
-					</span>
-				</p>
 			</div>
-
 		</div>
 	</div>
 </div>
