@@ -6990,6 +6990,7 @@ body {
 }
 .recuadro_de_texto > div > div {
   float: right;
+  margin-right: 140px;
 }
 .recuadro_de_texto > div > div h1 {
   color: #000;

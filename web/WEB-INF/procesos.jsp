@@ -112,18 +112,10 @@
         <div id="fondo3" class="fondos item"></div>
       </div>
     </div>
+    <script src="js/carrusel.js"></script>
     <!-- ATENCIÓN: El carrusel no funciona en Internet Explorer 9 (o anteriores) -->
 
     <!-- Confirmación de edad -->
     <%@include file="componentes/confirmacion_edad.jsp"%>
-
-    <script>
-      $('#carrusel_fondo').on('slide.bs.carousel', function (e) {
-        if (e.direction == "left")
-          $('#carrusel_contenido').carousel('next')
-        else
-          $('#carrusel_contenido').carousel('prev')
-      })
-    </script>
   </body>
 </html>

@@ -6981,27 +6981,32 @@ header > div > div > div:last-child p a:active {
 header > div > div > div:last-child p a.activo {
   font-family: roboto-regular;
 }
-body {
+#fondo1 {
+  background-image: url("../imagenes/productos/joven38.producto.jpg");
+  background-position: right center;
+}
+#fondo2 {
   background-image: url("../imagenes/productos/joven38.producto.2.jpg");
   background-position: right center;
 }
-.recuadro_de_texto > div > div h1 {
-  margin-bottom: 2px;
+#fondo3 {
+  background-image: url("../imagenes/fondos/inicio.fondo.jpg");
+  background-position: right center;
 }
-.recuadro_de_texto > div > div > div {
-  width: 250px;
+#fondo4 {
+  background-image: url("../imagenes/fondos/procesos.fondo.jpg");
+  background-position: right center;
+}
+.recuadro_de_texto > div > div h1 {
+  text-align: center;
+  margin-bottom: 2px;
 }
 .recuadro_de_texto > div > div > div p {
   text-align: center;
   margin-bottom: 1px;
   margin-top: 1px;
-}
-.recuadro_de_texto > div > div > div > p:nth-child(3) {
-  font-size: 18px;
-}
-.recuadro_de_texto > div > div > div > p:nth-child(4),
-.recuadro_de_texto > div > div > div > p:nth-child(5) {
-  font-size: 12px;
+  font-family: roboto-medium;
+  font-size: 14px;
 }
 .recuadro_de_texto > div > div > p:nth-child(3) {
   margin-top: 10px;
