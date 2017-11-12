@@ -24,6 +24,11 @@
     <outputDirectory>codigo_objeto</outputDirectory>
     <sourceDirectory>codigo_fuente/</sourceDirectory>
     <testSourceDirectory>codigo_fuente/</testSourceDirectory>
+    <resources>
+      <resource>
+        <directory>codigo_fuente/recursos</directory>
+      </resource>
+    </resources>
 
     <plugins>
 

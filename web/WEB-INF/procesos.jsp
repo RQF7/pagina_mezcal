@@ -1,9 +1,21 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<!--c:set var="language" value="${not empty param.language ?
+    param.language : not empty language ?
+    language : pageContext.request.locale}"
+    scope="session"/-->
+<c:set var="language" value="en"/>
+<fmt:setLocale value="${language}"/>
+<fmt:setBundle basename="text"/>
+
 <!DOCTYPE html>
-<html>
+<html lang="${language}">
   <head>
     <%@include file="componentes/meta.jsp"%>
-    <title>Procesos - Mezcal Amaxak</title>
+    <title><fmt:message key="navegacion.procesos"/> - Mezcal Amaxak</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <link rel="stylesheet" href="css/procesos.css"/>
@@ -22,20 +34,9 @@
           <div class="recuadro_de_texto">
             <div>
               <div>
-                <h1>Nuestros procesos</h1>
-                <p>
-                  El mezcal es una bebida que se encuentra profundamente arraigada en la vida y la
-                  cultura del Estado de Guerrero, y en el caso de <b>Amaxak</b>, es el resultado de
-                  revalorar las características que lo hacen único en el diverso mundo de los
-                  mezcales.
-                </p>
-                <p>
-                  La elaboración de nuestro Mezcal comienza con la siembra de la materia prima, una
-                  variedad regional de maguey espadín, también conocido como angosto o criollo. Este
-                  se planta en tierras abruptas, fragmentadas y de poca extensión de cultivo,
-                  pasando de 5 a 7 años para su maduración. Transcurrido ese tiempo, se cosecha y se
-                  traslada a la fábrica, para dar paso al proceso de fabricación del mezcal.
-                </p>
+                <h1><fmt:message key="procesos.titulo"/></h1>
+                <p><fmt:message key="procesos.parrafo1"/></p>
+                <p><fmt:message key="procesos.parrafo2"/></p>
               </div>
             </div>
           </div>
@@ -44,20 +45,9 @@
           <div class="recuadro_de_texto">
             <div>
               <div>
-                <h1>Nuestros procesos</h1>
-                <p>
-                  Una vez en nuestras instalaciones, las cabezas de agave se pesan y se acomodan
-                  alrededor de un horno cónico excavado en la tierra y recubierto de piedra
-                  volcánica. Con varias horas de anticipación se prende el horno, mismo que será
-                  alimentado con leña de recolección, en cuanto ha alcanzado la temperatura ideal,
-                  las piñas se vuelcan al interior, formando un cono que se cubre con hoja de
-                  plátano y tierra, para realizar el proceso de cocción que durará varios días.
-                </p>
-                <p>
-                  Ya cocido, el maguey es cortado en trozos más pequeños para ser machacados y
-                  desgarrados. El bagazo resultante se pone a fermentar en tinas con agua,
-                  transformándose por acción de sus propias levaduras en alcoholes.
-                </p>
+                <h1><fmt:message key="procesos.titulo"/></h1>
+                <p><fmt:message key="procesos.parrafo3"/></p>
+                <p><fmt:message key="procesos.parrafo4"/></p>
               </div>
             </div>
           </div>
@@ -66,31 +56,10 @@
           <div class="recuadro_de_texto">
             <div>
               <div>
-                <h1>Nuestros procesos</h1>
-                <p>
-                  Terminada la fermentación, se procede a realizar la doble destilación, proceso
-                  para separar los diferentes alcoholes y obtener el Mezcal Joven, en un alambique
-                  de cobre a fuego directo. Posteriormente podemos llevar este mezcal al reposo en
-                  barricas de Roble Blanco, o utilizarlo en la preparación de nuestro famoso licor.
-                </p>
-                <p>
-                  Todos los procesos de cultivo de maguey, fabricación y envasado de nuestros
-                  productos, son estrictamente vigilados por el <b>Consejo Regulador del Mezcal</b>,
-                  con lo cual se obtiene la certificación de la <b>NOM 070</b>, la cual norma la
-                  <b>Denominación de Origen</b> del Mezcal.
-                </p>
-                <!-- TODO: poner link a página de CRM. -->
-                <p>
-                  A la par de perpetuar las técnicas artesanales y de incorporar de manera cuidadosa
-                  las modernas, en la fábrica de mezcal «<i>El Refugio</i>», somos conscientes de
-                  nuestra responsabilidad ambiental y social. Desde hace más de veinte años,
-                  fomentamos la creación de viveros y plantaciones de agave, la reforestación y el
-                  manejo sustentable de los recursos naturales e hídricos, así como de los desechos
-                  de la producción. Por otro lado, vemos como un valor intrínseco del mezcal, la
-                  generación de fuentes de empleo y el apoyo a las numerosas familias que participan
-                  en su elaboración.
-                </p>
-                <!-- TODO: ¿Los recursos hidrícos no van incluidos en los recursos naturales? -->
+                <h1><fmt:message key="procesos.titulo"/></h1>
+                <p><fmt:message key="procesos.parrafo5"/></p>
+                <p><fmt:message key="procesos.parrafo6"/></p>
+                <p><fmt:message key="procesos.parrafo7"/></p>
               </div>
             </div>
           </div>

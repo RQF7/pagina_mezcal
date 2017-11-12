@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.Locale;
 
 public class Controlador extends HttpServlet {
 
@@ -13,6 +14,7 @@ public class Controlador extends HttpServlet {
   protected void doGet(HttpServletRequest peticion, HttpServletResponse respuesta)
       throws ServletException, IOException {
 
+    peticion.setAttribute("idioma", "es");
     String informacion = peticion.getServletPath();
     informacion = (informacion.equals("/")) ? "/inicio" : informacion;
 
@@ -29,19 +31,19 @@ public class Controlador extends HttpServlet {
 
     String rutaDestino = "";
     switch (informacion) {
-      case "/inicio":
+      case "/inicio": case "/home":
         rutaDestino = "/index.jsp";
         break;
-      case "/productos":
+      case "/productos": case "/products":
         rutaDestino = "/productos.jsp";
         break;
-      case "/procesos":
+      case "/procesos": case "/processes":
         rutaDestino = "/procesos.jsp";
         break;
-      case "/historia":
+      case "/historia": case "/history":
         rutaDestino = "/historia.jsp";
         break;
-      case "/contacto":
+      case "/contacto": case "/contact":
         rutaDestino = "/contacto.jsp";
         break;
       default:

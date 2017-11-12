@@ -1,4 +1,15 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<!--c:set var="language" value="${not empty param.language ?
+    param.language : not empty language ?
+    language : pageContext.request.locale}"
+    scope="session"/-->
+<c:set var="language" value="en"/>
+<fmt:setLocale value="${language}"/>
+<fmt:setBundle basename="text"/>
+
 <%
   String ruta = (String) request.getAttribute("ruta");
 %>
@@ -10,24 +21,40 @@
       </div>
       <div>
         <div>
-          <a <%= ruta.equals("/inicio") ? "class=\"activo\"" : "" %>
-              href="inicio">Inicio</a>
+          <fmt:message key="urls.inicio" var="inicio"/>
+          <a <%= ruta.equals("/" + pageContext.getAttribute("inicio")) ?
+              "class=\"activo\"" : "" %> href="${inicio}">
+            <fmt:message key="navegacion.inicio"/>
+          </a>
         </div>
         <div>
-          <a <%= ruta.equals("/historia") ? "class=\"activo\"" : "" %>
-              href="historia">Historia</a>
+          <fmt:message key="urls.historia" var="historia"/>
+          <a <%= ruta.equals("/" + pageContext.getAttribute("historia")) ?
+              "class=\"activo\"" : "" %> href="${historia}">
+            <fmt:message key="navegacion.historia"/>
+          </a>
         </div>
         <div>
-          <a <%= ruta.equals("/procesos") ? "class=\"activo\"" : "" %>
-              href="procesos">Procesos</a>
+          <fmt:message key="urls.procesos" var="procesos"/>
+          <a <%= ruta.equals("/" + pageContext.getAttribute("procesos")) ?
+              "class=\"activo\"" : "" %> href="${procesos}">
+            <fmt:message key="navegacion.procesos"/>
+          </a>
         </div>
         <div>
-          <a <%= ruta.equals("/productos") ? "class=\"activo\"" : "" %>
-              href="productos">Productos</a>
+          <fmt:message key="urls.productos" var="productos"/>
+          <a <%= ruta.equals("/" + pageContext.getAttribute("productos")) ?
+              "class=\"activo\"" : "" %>
+              href="${productos}">
+            <fmt:message key="navegacion.productos"/>
+          </a>
         </div>
         <div>
-          <a <%= ruta.equals("/contacto") ? "class=\"activo\"" : "" %>
-              href="contacto">Contacto</a>
+          <fmt:message key="urls.contacto" var="contacto"/>
+          <a <%= ruta.equals("/" + pageContext.getAttribute("contacto")) ?
+              "class=\"activo\"" : "" %> href="${contacto}">
+            <fmt:message key="navegacion.contacto"/>
+          </a>
         </div>
       </div>
       <div>

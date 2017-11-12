@@ -1,9 +1,20 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<!--c:set var="language" value="${not empty param.language ?
+    param.language : not empty language ?
+    language : pageContext.request.locale}"
+    scope="session"/-->
+<c:set var="language" value="en"/>
+<fmt:setLocale value="${language}"/>
+<fmt:setBundle basename="text"/>
+
 <!DOCTYPE html>
-<html>
+<html lang="${language}">
   <head>
     <%@include file="componentes/meta.jsp"%>
-    <title>Contacto - Mezcal Amaxak</title>
+    <title><fmt:message key="navegacion.contact"/> - Mezcal Amaxak</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <link rel="stylesheet" href="css/contacto.css"/>
@@ -14,7 +25,7 @@
     <div class="recuadro_de_texto">
       <div>
         <div>
-          <h1>Informes y ventas</h1>
+          <h1><fmt:message key="contacto.titulo"/></h1>
             <div>
               <div>
                 <img src="imagenes/logos/logo.png"/>

@@ -1,9 +1,20 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<!--c:set var="language" value="${not empty param.language ?
+    param.language : not empty language ?
+    language : pageContext.request.locale}"
+    scope="session"/-->
+<c:set var="language" value="en"/>
+<fmt:setLocale value="${language}"/>
+<fmt:setBundle basename="text"/>
+
 <!DOCTYPE html>
-<html>
+<html lang="${language}">
   <head>
     <%@include file="componentes/meta.jsp"%>
-    <title>Productos - Mezcal Amaxak</title>
+    <title><fmt:message key="navegacion.productos"/> - Mezcal Amaxak</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <link rel="stylesheet" href="css/productos.css"/>
@@ -22,34 +33,20 @@
           <div class="recuadro_de_texto">
             <div>
               <div>
-                <h1>AMAXAK JOVEN 38%</h1>
+                <h1><fmt:message key="productos.joven38.titulo"/></h1>
                 <div>
-                  <p>Mezcal Artesanal.</p>
-                  <p>Joven.</p>
-                  <p>38% Maguey Espadín.</p>
-                  <p>45% Alc. Vol.</p>
-                  <p>Certificación NOM-070 (CRM).</p>
-                  <p>Denominación de Origen Protegida.</p>
-                  <p>Presentaciones de 750 y 250 ml.</p>
+                  <p><fmt:message key="productos.genericos.clasificacion"/></p>
+                  <p><fmt:message key="productos.joven38.tipo"/></p>
+                  <p><fmt:message key="productos.genericos.maguey"/></p>
+                  <p><fmt:message key="productos.joven38.alcohol"/></p>
+                  <p><fmt:message key="productos.genericos.certificacion"/></p>
+                  <p><fmt:message key="productos.genericos.origen"/></p>
+                  <p><fmt:message key="productos.genericos.presentaciones"/></p>
                 </div>
-                <p>
-                  Producido y envasado de origen en la Fábrica de Mezcal «<i>El Refugio</i>»,
-                  municipio de Pilcaya, en la zona norte del Estado de Guerrero.
-                </p>
-                <p>
-                  Para su producción se utiliza Maguey Espadín (Angustifolia Haw), variedad propia
-                  de la región, cuya maduración requiere de 5 a 7 años. Se cosecha en suelos
-                  montañosos entre los 1,300 y los 1,400 m.s.n.m.
-                </p>
-                <p>
-                  Mezcal elaborado artesanalmente, cocido en horno cónico de tezontle y destilado
-                  dos veces en alambique de cobre a fuego directo.
-                </p>
-                <p>
-                  <b>Rasgos característicos:</b> aroma suave a maguey cocido, ligeramente ahumado y
-                  ligero aroma a barro y tierra húmeda. Sabor a maguey cocido, barro, frutales,
-                  ligeramente dulce, ligeramente más fuerte. Perlas combinadas de duración media.
-                </p>
+                <p><fmt:message key="productos.genericos.parrafo1"/></p>
+                <p><fmt:message key="productos.genericos.parrafo2"/></p>
+                <p><fmt:message key="productos.genericos.parrafo3"/></p>
+                <p><fmt:message key="productos.genericos.parrafo4"/></p>
               </div>
             </div>
           </div>
@@ -58,34 +55,20 @@
           <div class="recuadro_de_texto">
             <div>
               <div>
-                <h1>AMAXAK JOVEN 45%</h1>
+                <h1><fmt:message key="productos.joven45.titulo"/></h1>
                 <div>
-                  <p>Mezcal Artesanal.</p>
-                  <p>Joven.</p>
-                  <p>100% Maguey Espadín.</p>
-                  <p>45% Alc. Vol.</p>
-                  <p>Certificación NOM-070 (CRM).</p>
-                  <p>Denominación de Origen Protegida.</p>
-                  <p>Presentaciones de 750 y 250 ml.</p>
+                  <p><fmt:message key="productos.genericos.clasificacion"/></p>
+                  <p><fmt:message key="productos.joven45.tipo"/></p>
+                  <p><fmt:message key="productos.genericos.maguey"/></p>
+                  <p><fmt:message key="productos.joven45.alcohol"/></p>
+                  <p><fmt:message key="productos.genericos.certificacion"/></p>
+                  <p><fmt:message key="productos.genericos.origen"/></p>
+                  <p><fmt:message key="productos.genericos.presentaciones"/></p>
                 </div>
-                <p>
-                  Producido y envasado de origen en la Fábrica de Mezcal «<i>El Refugio</i>»,
-                  municipio de Pilcaya, en la zona norte del Estado de Guerrero.
-                </p>
-                <p>
-                  Para su producción se utiliza Maguey Espadín (Angustifolia Haw), variedad propia
-                  de la región, cuya maduración requiere de 5 a 7 años. Se cosecha en suelos
-                  montañosos entre los 1,300 y los 1,400 m.s.n.m.
-                </p>
-                <p>
-                  Mezcal elaborado artesanalmente, cocido en horno cónico de tezontle y destilado
-                  dos veces en alambique de cobre a fuego directo.
-                </p>
-                <p>
-                  <b>Rasgos característicos:</b> aroma suave a maguey cocido, ligeramente ahumado y
-                  ligero aroma a barro y tierra húmeda. Sabor a maguey cocido, barro, frutales,
-                  ligeramente dulce, ligeramente más fuerte. Perlas combinadas de duración media.
-                </p>
+                <p><fmt:message key="productos.genericos.parrafo1"/></p>
+                <p><fmt:message key="productos.genericos.parrafo2"/></p>
+                <p><fmt:message key="productos.genericos.parrafo3"/></p>
+                <p><fmt:message key="productos.genericos.parrafo4"/></p>
               </div>
             </div>
           </div>
@@ -94,38 +77,21 @@
           <div class="recuadro_de_texto">
             <div>
               <div>
-                <h1>AMAXAK REPOSADO</h1>
+                <h1><fmt:message key="productos.reposado.titulo"/></h1>
                 <div>
-                  <p>Mezcal Artesanal.</p>
-                  <p>Reposado.</p>
-                  <p>100% Maguey Espadín.</p>
-                  <p>38% Alc. Vol.</p>
-                  <p>Certificación NOM-070 (CRM).</p>
-                  <p>Denominación de Origen Protegida.</p>
-                  <p>Presentaciones de 750 y 250 ml.</p>
+                  <p><fmt:message key="productos.genericos.clasificacion"/></p>
+                  <p><fmt:message key="productos.reposado.tipo"/></p>
+                  <p><fmt:message key="productos.genericos.maguey"/></p>
+                  <p><fmt:message key="productos.reposado.alcohol"/></p>
+                  <p><fmt:message key="productos.genericos.certificacion"/></p>
+                  <p><fmt:message key="productos.genericos.origen"/></p>
+                  <p><fmt:message key="productos.genericos.presentaciones"/></p>
                 </div>
-                <p>
-                  Producido y envasado de origen en la Fábrica de Mezcal «<i>El Refugio</i>»,
-                  municipio de Pilcaya, en la zona norte del Estado de Guerrero.
-                </p>
-                <p>
-                  Para su producción se utiliza Maguey Espadín (Angustifolia Haw), variedad propia
-                  de la región, cuya maduración requiere de 5 a 7 años. Se cosecha en suelos
-                  montañosos entre los 1,300 y los 1,400 m.s.n.m.
-                </p>
-                <p>
-                  Mezcal elaborado artesanalmente, cocido en horno cónico de tezontle y destilado
-                  dos veces en alambique de cobre a fuego directo.
-                </p>
-                <p>
-                  Reposado en barricas de Roble Blanco, por más de 6 meses, en un ambiente
-                  controlado.
-                </p>
-                <p>
-                  <b>Rasgos característicos:</b> aroma suave a maguey cocido, ligeramente ahumado y
-                  ligero aroma a madera. Sabor suave a maguey cocido, madera, frutales, ligeramente
-                  dulce. Perlas combinadas de duración media.
-                </p>
+                <p><fmt:message key="productos.genericos.parrafo1"/></p>
+                <p><fmt:message key="productos.genericos.parrafo2"/></p>
+                <p><fmt:message key="productos.genericos.parrafo3"/></p>
+                <p><fmt:message key="productos.reposado.parrafo"/></p>
+               <p><fmt:message key="productos.genericos.parrafo4"/></p>
               </div>
             </div>
           </div>
@@ -134,26 +100,15 @@
           <div class="recuadro_de_texto">
             <div>
               <div>
-                <h1>AMAXAK LICOR</h1>
+                <h1><fmt:message key="productos.licor.titulo"/></h1>
                 <div>
-                  <p>Licor de Agave Mezcalero.</p>
-                  <p>35% Alc. Vol.</p>
-                  <p>Presentaciones de 750 y 250 ml.</p>
+                  <p><fmt:message key="productos.licor.tipo"/></p>
+                  <p><fmt:message key="productos.licor.alcohol"/></p>
+                  <p><fmt:message key="productos.genericos.presentaciones"/></p>
                 </div>
-                <p>
-                  Licor elaborado con mezcal joven, 100% de agave, adicionado de canela, almendra y
-                  especias, para darle un inigualable sabor.
-                </p>
-                <p>
-                  Receta auténtica que las mujeres de la <i>Familia Figueroa</i> han elaborado desde
-                  hace cien años en la Fábrica de Mezcal «<i>El Refugio</i>».
-                </p>
-                <p>
-                  <b>Rasgos característicos:</b> licor suave, ligeramente dulce, que pese a sus
-                  ingredientes (canela, almendra y especies) conserva el característico sabor del
-                  mezcal, producido con el maguey propio de la región.
-                </p>
-                <!-- TODO: ¿Especies o especias? -->
+                <p><fmt:message key="productos.licor.parrafo1"/></p>
+                <p><fmt:message key="productos.licor.parrafo2"/></p>
+                <p><fmt:message key="productos.licor.parrafo3"/></p>
               </div>
             </div>
           </div>
