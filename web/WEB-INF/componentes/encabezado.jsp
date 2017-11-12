@@ -1,18 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
-<!--c:set var="language" value="${not empty param.language ?
-    param.language : not empty language ?
-    language : pageContext.request.locale}"
-    scope="session"/-->
-<c:set var="language" value="en"/>
-<fmt:setLocale value="${language}"/>
+<fmt:setLocale value="${idioma}"/>
 <fmt:setBundle basename="text"/>
 
 <%
   String ruta = (String) request.getAttribute("ruta");
+  String rutaTraducida = (String) request.getAttribute("rutaTraducida");
+  String idioma = (String) request.getAttribute("idioma");
 %>
+
 <header>
   <div>
     <div>
@@ -59,7 +55,15 @@
       </div>
       <div>
         <p>
-          <a class="activo">Español</a> / <a>English</a>
+          <a <%= idioma.equals("es") ? "class=\"activo\" href=\"" + ruta + "\"" 
+              : "href=\"" + rutaTraducida + "\"" %>>
+            Español
+          </a> 
+          / 
+          <a <%= idioma.equals("en") ? "class=\"activo\" href=\"" + ruta + "\"" 
+              : "href=\"" + rutaTraducida + "\"" %>>
+            English
+          </a>
         </p>
       </div>
     </div>

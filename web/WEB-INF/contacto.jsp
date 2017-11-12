@@ -1,20 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
-<!--c:set var="language" value="${not empty param.language ?
-    param.language : not empty language ?
-    language : pageContext.request.locale}"
-    scope="session"/-->
-<c:set var="language" value="en"/>
-<fmt:setLocale value="${language}"/>
+<fmt:setLocale value="${idioma}"/>
 <fmt:setBundle basename="text"/>
 
 <!DOCTYPE html>
-<html lang="${language}">
+<html lang="${idioma}">
   <head>
     <%@include file="componentes/meta.jsp"%>
-    <title><fmt:message key="navegacion.contact"/> - Mezcal Amaxak</title>
+    <title><fmt:message key="navegacion.contacto"/> - Mezcal Amaxak</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <link rel="stylesheet" href="css/contacto.css"/>

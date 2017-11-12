@@ -1,12 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
 <fmt:setLocale value="${idioma}"/>
 <fmt:setBundle basename="text"/>
 
 <!DOCTYPE html>
-<html lang="${language}">
+<html lang="${idioma}">
   <head>
     <%@include file="componentes/meta.jsp"%>
     <title>Mezcal Amaxak</title>

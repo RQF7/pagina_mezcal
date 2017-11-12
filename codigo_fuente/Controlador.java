@@ -14,7 +14,6 @@ public class Controlador extends HttpServlet {
   protected void doGet(HttpServletRequest peticion, HttpServletResponse respuesta)
       throws ServletException, IOException {
 
-    peticion.setAttribute("idioma", "es");
     String informacion = peticion.getServletPath();
     informacion = (informacion.equals("/")) ? "/inicio" : informacion;
 
@@ -30,21 +29,36 @@ public class Controlador extends HttpServlet {
     }
 
     String rutaDestino = "";
+    String idioma = "";
+    String rutaTraducida = "";
+
+    /* TODO: Sacar urls de archivos de propiedades. */
+
     switch (informacion) {
       case "/inicio": case "/home":
         rutaDestino = "/index.jsp";
+        idioma = (informacion.equals("/inicio")) ? "es" : "en";
+        rutaTraducida = (idioma.equals("es")) ? "/home" : "/inicio";
         break;
       case "/productos": case "/products":
         rutaDestino = "/productos.jsp";
+        idioma = (informacion.equals("/productos")) ? "es" : "en";
+        rutaTraducida = (idioma.equals("es")) ? "/products" : "/productos";
         break;
       case "/procesos": case "/processes":
         rutaDestino = "/procesos.jsp";
+        idioma = (informacion.equals("/procesos")) ? "es" : "en";
+        rutaTraducida = (idioma.equals("es")) ? "/processes" : "/procesos";
         break;
       case "/historia": case "/history":
         rutaDestino = "/historia.jsp";
+        idioma = (informacion.equals("/historia")) ? "es" : "en";
+        rutaTraducida = (idioma.equals("es")) ? "/history" : "/historia";
         break;
       case "/contacto": case "/contact":
         rutaDestino = "/contacto.jsp";
+        idioma = (informacion.equals("/contacto")) ? "es" : "en";
+        rutaTraducida = (idioma.equals("es")) ? "/contact" : "/contacto";
         break;
       default:
         System.out.println("Error: " + informacion);
@@ -53,6 +67,8 @@ public class Controlador extends HttpServlet {
     }
 
     peticion.setAttribute("ruta", informacion);
+    peticion.setAttribute("idioma", idioma);
+    peticion.setAttribute("rutaTraducida", rutaTraducida);
     RequestDispatcher vista = peticion.getRequestDispatcher("WEB-INF" + rutaDestino);
     vista.forward(peticion, respuesta);
   }
