@@ -101,6 +101,7 @@
 	{
 		enviar_confirmacion();
     if (control_estado % 2 == 0) {
+      reestablecer_scroll();
 		  $('#confirmacion').slideUp({
 			  duration: 1000,
 			  easing: 'easeOutExpo'

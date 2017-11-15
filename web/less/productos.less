@@ -1,24 +1,49 @@
 @import "general";
 @import "encabezado";
 
-#fondo1 {
-  background-image: url("../imagenes/productos/joven38.producto.jpg");
-  background-position: right center;
+body {
+  background-color: #fff;
 }
 
-#fondo2 {
-  background-image: url("../imagenes/productos/joven38.producto.2.jpg");
-  background-position: right center;
+.item {
+  background-size: cover;
+  background-position: center top;
+  height: 1000px;
 }
 
-#fondo3 {
+.carousel-indicators {
+  position: fixed;
+  bottom: 0px;
+}
+
+#contenido1 {
   background-image: url("../imagenes/fondos/inicio.fondo.jpg");
-  background-position: right center;
 }
 
-#fondo4 {
-  background-image: url("../imagenes/fondos/procesos.fondo.jpg");
-  background-position: right center;
+#contenido2 {
+  background-image: url("../imagenes/productos/joven38.producto.jpg");
+}
+
+#contenido3 {
+  background-image: url("../imagenes/productos/joven45.producto.jpg");
+  &>div>div>div {
+    .derecha;
+  }
+}
+
+#contenido4 {
+  background-image: url("../imagenes/productos/reposado.producto.jpg");
+}
+
+#contenido5 {
+  background-image: url("../imagenes/productos/licor.producto.jpg");
+  &>div>div>div {
+    .derecha;
+  }
+}
+
+.affix {
+  position: fixed;
 }
 
 .recuadro_de_texto>div>div {

@@ -14,15 +14,24 @@
     <%@include file="componentes/bibliotecas.jsp"%>
   </head>
   <body>
-    <!-- Encabezado -->
-    <%@include file="componentes/encabezado.jsp"%>
 
-    <!-- Contenido de página -->
+    <%@include file="componentes/encabezado.jsp"%>
     <div id="carrusel_contenido" class="carousel slide"
-        data-ride="carousel" data-pause=null data-interval=false>
+        data-ride="carousel" data-pause=null data-interval=30000>
+      
+      <!-- Indicadores de carrusel -->
+      <ol class="carousel-indicators">
+        <li data-target="#carrusel_contenido" data-slide-to="0" class="active"></li>
+        <li data-target="#carrusel_contenido" data-slide-to="1"></li>
+        <li data-target="#carrusel_contenido" data-slide-to="2"></li>
+        <li data-target="#carrusel_contenido" data-slide-to="3"></li>
+        <li data-target="#carrusel_contenido" data-slide-to="4"></li>
+      </ol>
 
       <div class="carousel-inner" role="listbox">
-        <div id="contenido1" class="item active">
+        <div id="contenido1" class="item active"></div>
+        <div id="contenido2" class="item"
+            data-spy="affix" data-offset-top="105">
           <div class="recuadro_de_texto">
             <div>
               <div>
@@ -44,7 +53,7 @@
             </div>
           </div>
         </div>
-        <div id="contenido2" class="item">
+        <div id="contenido3" class="item">
           <div class="recuadro_de_texto">
             <div>
               <div>
@@ -66,7 +75,7 @@
             </div>
           </div>
         </div>
-        <div id="contenido3" class="item">
+        <div id="contenido4" class="item">
           <div class="recuadro_de_texto">
             <div>
               <div>
@@ -89,7 +98,7 @@
             </div>
           </div>
         </div>
-        <div id="contenido4" class="item">
+        <div id="contenido5" class="item">
           <div class="recuadro_de_texto">
             <div>
               <div>
@@ -108,25 +117,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Fondos -->
-    <div id="carrusel_fondo" class="carousel slide"
-        data-ride="carousel" data-pause=null data-interval=25000>
-      <ol class="carousel-indicators">
-        <li data-target="#carrusel_fondo" data-slide-to="0" class="active"></li>
-        <li data-target="#carrusel_fondo" data-slide-to="1"></li>
-        <li data-target="#carrusel_fondo" data-slide-to="2"></li>
-        <li data-target="#carrusel_fondo" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div id="fondo1" class="fondos item active"></div>
-        <div id="fondo2" class="fondos item"></div>
-        <div id="fondo3" class="fondos item"></div>
-        <div id="fondo4" class="fondos item"></div>
-      </div>
-    </div>
-    <script src="js/carrusel.js"></script>
-    <!-- ATENCIÓN: El carrusel no funciona en Internet Explorer 9 (o anteriores) -->
 
     <!-- Confirmación de edad -->
     <%@include file="componentes/confirmacion_edad.jsp"%>
