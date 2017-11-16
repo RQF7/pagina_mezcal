@@ -12,6 +12,20 @@
     <meta name="description" content=""/>
     <link rel="stylesheet" href="css/productos.css"/>
     <%@include file="componentes/bibliotecas.jsp"%>
+
+    <style>
+      .item.active {
+        transform: none;
+        perspective: none;
+      }
+      @media all and (transform-3d), (-webkit-transform-3d) {
+        .carousel-inner > .item.next.left,
+        .carousel-inner > .item.prev.right,
+        .carousel-inner > .item.active {
+          transform: none;
+        }
+      }
+    </style>
   </head>
   <body>
 
@@ -29,10 +43,9 @@
       </ol>
 
       <div class="carousel-inner" role="listbox">
-        <div id="contenido1" class="item active"></div>
-        <div id="contenido2" class="item"
-            data-spy="affix" data-offset-top="105">
-          <div class="recuadro_de_texto">
+        <div id="contenido1" class="item producto active"></div>
+        <div id="contenido2" class="item producto">
+          <div class="recuadro_de_texto" data-spy="affix" data-offset-top="105">
             <div>
               <div>
                 <h1><fmt:message key="productos.joven38.titulo"/></h1>
@@ -53,8 +66,8 @@
             </div>
           </div>
         </div>
-        <div id="contenido3" class="item">
-          <div class="recuadro_de_texto">
+        <div id="contenido3" class="item producto">
+          <div class="recuadro_de_texto" data-spy="affix" data-offset-top="105">
             <div>
               <div>
                 <h1><fmt:message key="productos.joven45.titulo"/></h1>
@@ -75,8 +88,8 @@
             </div>
           </div>
         </div>
-        <div id="contenido4" class="item">
-          <div class="recuadro_de_texto">
+        <div id="contenido4" class="item producto">
+          <div class="recuadro_de_texto" data-spy="affix" data-offset-top="105">
             <div>
               <div>
                 <h1><fmt:message key="productos.reposado.titulo"/></h1>
@@ -98,8 +111,8 @@
             </div>
           </div>
         </div>
-        <div id="contenido5" class="item">
-          <div class="recuadro_de_texto">
+        <div id="contenido5" class="item producto">
+          <div class="recuadro_de_texto" data-spy="affix" data-offset-top="105">
             <div>
               <div>
                 <h1><fmt:message key="productos.licor.titulo"/></h1>

@@ -6984,10 +6984,13 @@ header > div > div > div:last-child p a.activo {
 body {
   background-color: #fff;
 }
-.item {
+.producto {
   background-size: cover;
   background-position: center top;
   height: 1000px;
+}
+.affix {
+  top: 0px;
 }
 .carousel-indicators {
   position: fixed;
@@ -7013,9 +7016,6 @@ body {
 }
 #contenido5 > div > div > div {
   float: right;
-}
-.affix {
-  position: fixed;
 }
 .recuadro_de_texto > div > div h1 {
   text-align: center;
