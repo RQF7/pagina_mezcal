@@ -6982,15 +6982,15 @@ header > div > div > div:last-child p a.activo {
   font-family: roboto-regular;
 }
 #fondo1 {
-  background-image: url("../imagenes/fondos/procesos.fondo.jpg");
+  background-image: url("../imagenes/fondos/procesos3.fondo.jpg");
   background-position: right center;
 }
 #fondo2 {
-  background-image: url("../imagenes/fondos/historia.fondo.jpg");
+  background-image: url("../imagenes/fondos/procesos2.fondo.jpg");
   background-position: right center;
 }
 #fondo3 {
-  background-image: url("../imagenes/fondos/inicio.fondo.jpg");
+  background-image: url("../imagenes/fondos/procesos.fondo.jpg");
   background-position: right center;
 }
 #contenido1 > div > div > div,
