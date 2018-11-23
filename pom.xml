@@ -15,7 +15,7 @@
   <packaging>war</packaging>
   <version>1.0.0</version>
 
-  <!-- Plugins para la construcción ============================================================-->
+  <!-- Plugins para la construcción ========================================-->
 
   <build>
 
@@ -64,11 +64,12 @@
 
       <!--
           Mave dependency plugin
-          Mantiene los jars de las dependencias en «target/dependency». Creo que va un poco en
-          contra de la filosofía inicial de maven, pues no se comparten las dependencias entre
-          distintos proyectos; sin embargo es necesario para poder desplegar la aplicación
-          en Heroku.
-          Descarga el web app runner que ocupa Heroku para desplegar la aplicación.
+          Mantiene los jars de las dependencias en «target/dependency». Creo
+          que va un poco en contra de la filosofía inicial de maven, pues no se
+          comparten las dependencias entre distintos proyectos; sin embargo es
+          necesario para poder desplegar la aplicación en Heroku.
+          Descarga el web app runner que ocupa Heroku para desplegar la
+          aplicación.
       -->
 
       <plugin>
@@ -127,7 +128,7 @@
     </plugins>
   </build>
 
-  <!-- Dependencias ============================================================================-->
+  <!-- Dependencias ========================================================-->
 
   <dependencies>
 
@@ -141,7 +142,7 @@
 
   </dependencies>
 
-  <!-- Configuraciones =========================================================================-->
+  <!-- Configuraciones =====================================================-->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
