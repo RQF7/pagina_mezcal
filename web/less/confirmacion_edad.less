@@ -1,40 +1,70 @@
 @import "variables.less";
 @import (reference) "bootstrap/bootstrap.less";
 
+// Separación entre cada fila:
+// logo, pregunta, respuestas e idioma
+@separacion_entre_elementos: 40px;
+@separacion_entre_elementos_estrechos: 20px;
+@ancho_de_logo: 320px;
+@ancho_de_logo_estrecho: 280px;
+
 html, body {
   font-family: roboto-regular;
-	max-height: 100%;
+	height: 100%;
 	overflow-y: hidden;
 }
 
+.elemento_de_columna {
+  margin-bottom: @separacion_entre_elementos;
+  @media (max-height: 580px) {
+    margin-bottom: @separacion_entre_elementos_estrechos;
+  }
+}
+
 #confirmacion {
+
+  // Posición
+  // cubre toda la pantalla
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
+	z-index: 2000;
+
+  // Fondo
+  // el color se muestra en el tiempo de carga de la imagen
   background-color: white;
 	background-image: url('../imagenes/fondos/edad.fondo.jpg');
 	background-position: left center;
 	background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-	z-index: 2000;
-	.container-fluid;
+
+  // Posición de hijos
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	
+  // Estilos de bootstrap
+  .container-fluid;
 
 	#confirmacion-contenedor {
 
 		img {
-			margin-top: 80px;
-			margin-bottom: 60px;
-			width: 352.058px;
+			width: @ancho_de_logo;
+      @media (max-width: 320px) {
+        width: @ancho_de_logo_estrecho;
+      }
+
 			.center-block;
+      .elemento_de_columna;
 		}
 
 		.confirmacion-pregunta {
 			.container;
-			margin-top: 18px;
-			margin-bottom: 33px;
+      .elemento_de_columna;
 
 			p {
 				color: black;
@@ -45,8 +75,7 @@ html, body {
 
 		.confirmacion-respuesta {
 			.container;
-			margin-top: 33px;
-			margin-bottom: 37px;
+      .elemento_de_columna;
 
 			div {
 				display: inline-block;
@@ -75,6 +104,7 @@ html, body {
 				color: black;
 				font-size: 54pt;
 				font-family: roboto-light;
+        line-height: 1;
 
 				&:focus {
 					outline: 0px;
@@ -87,7 +117,6 @@ html, body {
 		}
 
 		#confirmacion-idiomas {
-			margin-top: 37px;
 			max-width: 600px;
 			min-width: 200px;
 			margin-left: auto;
