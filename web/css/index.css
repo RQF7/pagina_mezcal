@@ -6993,12 +6993,12 @@ header > div > div > div:last-child p a.activo {
   background-image: url("../imagenes/fondos/inicio3.fondo.jpg");
   background-position: right center;
 }
-body > div:nth-child(2) {
+#contenido_de_inicio {
   width: 60%;
   margin-top: 60px;
   margin-left: 100px;
 }
-body > div:nth-child(2) > p {
+#contenido_de_inicio > p {
   font-family: niconne;
   font-size: 48pt;
   color: #fff;

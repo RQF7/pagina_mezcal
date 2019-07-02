@@ -29,6 +29,7 @@
   </head>
   <body>
 
+    <%@include file="componentes/confirmacion_edad.jsp"%>
     <%@include file="componentes/encabezado.jsp"%>
     <div id="carrusel_contenido" class="carousel slide"
         data-ride="carousel" data-pause=null data-interval=30000>
@@ -130,8 +131,5 @@
         </div>
       </div>
     </div>
-
-    <!-- Confirmación de edad -->
-    <%@include file="componentes/confirmacion_edad.jsp"%>
   </body>
 </html>

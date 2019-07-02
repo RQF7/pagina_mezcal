@@ -14,7 +14,7 @@
     <%@include file="componentes/bibliotecas.jsp"%>
   </head>
   <body>
-    <!-- Encabezado -->
+    <%@include file="componentes/confirmacion_edad.jsp"%>
     <%@include file="componentes/encabezado.jsp"%>
 
     <!-- Contenido de página -->
@@ -75,8 +75,5 @@
     </div>
     <script src="js/carrusel.js"></script>
     <!-- ATENCIÓN: El carrusel no funciona en Internet Explorer 9 (o anteriores) -->
-
-    <!-- Confirmación de edad -->
-    <%@include file="componentes/confirmacion_edad.jsp"%>
   </body>
 </html>

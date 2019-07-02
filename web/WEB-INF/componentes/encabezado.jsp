@@ -3,12 +3,6 @@
 <fmt:setLocale value="${idioma}"/>
 <fmt:setBundle basename="text"/>
 
-<%
-  String ruta = (String) request.getAttribute("ruta");
-  String rutaTraducida = (String) request.getAttribute("rutaTraducida");
-  String idioma = (String) request.getAttribute("idioma");
-%>
-
 <header>
   <div>
     <div>

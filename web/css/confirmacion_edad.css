@@ -40,6 +40,7 @@ body {
   bottom: 0px;
   left: 0px;
   right: 0px;
+  background-color: white;
   background-image: url('../imagenes/fondos/edad.fondo.jpg');
   background-position: left center;
   background-repeat: no-repeat;

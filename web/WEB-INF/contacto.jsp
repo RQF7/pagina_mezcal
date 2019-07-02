@@ -14,6 +14,7 @@
     <%@include file="componentes/bibliotecas.jsp"%>
   </head>
   <body>
+    <%@include file="componentes/confirmacion_edad.jsp"%>
     <%@include file="componentes/encabezado.jsp"%>
     <div class="recuadro_de_texto">
       <div>
@@ -52,6 +53,5 @@
         </div>
       </div>
     </div>
-    <%@include file="componentes/confirmacion_edad.jsp"%>
   </body>
 </html>

@@ -1,5 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%
+  String ruta = (String) request.getAttribute("ruta");
+  String rutaTraducida = (String) request.getAttribute("rutaTraducida");
+  String idioma = (String) request.getAttribute("idioma");
   if (request.getAttribute("sin_bandera_edad") != null) {
 %>
 
@@ -114,7 +117,9 @@
 	/* Acción negativa */
 	function negativo ()
 	{
-
+    window.open(
+      'http://alcoholinformate.org.mx/consumoresponsable/',
+      '_self')
 	}
 
 	/* Envía al servidor confirmación de edad */

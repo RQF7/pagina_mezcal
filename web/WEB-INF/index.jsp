@@ -14,11 +14,14 @@
     <%@include file="componentes/bibliotecas.jsp"%>
   </head>
   <body>
+    <!-- Confirmación de edad -->
+    <%@include file="componentes/confirmacion_edad.jsp"%>
+
     <!-- Encabezado -->
     <%@include file="componentes/encabezado.jsp"%>
 
     <!-- Contenido de página -->
-    <div>
+    <div id="contenido_de_inicio">
       <p>
         <fmt:message key="inicio.texto"/>
       </p>
@@ -34,8 +37,5 @@
       </div>
     </div>
     <!-- ATENCIÓN: El carrusel no funciona en Internet Explorer 9 (o anteriores) -->
-
-    <!-- Confirmación de edad -->
-    <%@include file="componentes/confirmacion_edad.jsp"%>
   </body>
 </html>
