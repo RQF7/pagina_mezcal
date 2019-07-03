@@ -1,68 +1,78 @@
 @import "bootstrap/bootstrap";
 @import "variables";
 
-header {
+#barra_de_navegacion {
+  
   background-color: @gris-fondo;
+  border-radius: 0px;
+  min-height: 100px;
+  margin-bottom: 0px;
+
   &>div {
-    padding: 15px 60px 15px 60px;
-    &>div {
-      .make-row();
-      &>div:first-child {
-        .make-md-column(2);
+  
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    // Logo y activación
+    .navbar-header {
+      a {
+        padding: 0px;
+        @media (max-width: 768px) {
+          margin-left: 15px;
+        }
         img {
           height: @alto-imagen;
         }
       }
-      &>div:nth-child(2) {
-        .make-md-column(8);
-        .make-row();
-        margin-top: @alto-imagen - 40;
-        &>div {
-          .make-md-column(12.0/5.0);
-          .text-center;
-          a {
-            font-family: roboto-light;
-            font-size: 18pt;
-            color: #000;
-          }
-          a:hover {
-            font-family: roboto-medium;
-            text-decoration: none;
-          }
-          a:visited, a:active, a:focus {
-            text-decoration: none;
-          }
-          a.activo {
-            font-family: roboto-regular;
-            text-decoration: none;
-          }
-          a.activo:hover, a.activo:visited, a.activo:active, a.activo:focus {
-            text-decoration: none;
-          }
-        }
+
+      &>button {
+        border: 0px !important;
       }
-      &>div:last-child {
-        .make-md-column(2);
-        padding: 0px;
-        p {
-          text-align: right;
-          font-family: roboto-light;
-          font-size: 8pt;
-          a {
-            color: #000;
-          }
-          a:hover {
-            font-family: roboto-medium;
-            text-decoration: none;
-          }
-          a:visited, a:active {
-            text-decoration: none;
-          }
-          a.activo {
-            font-family: roboto-regular;
-          }
-        }
+      &>button:hover, &>button:focus {
+        background-color: rgba(255, 255, 255, 0.8);
       }
     }
+
+    .navbar-collapse {
+      border: 0px;
+      overflow-x: hidden;
+    }
+
+    // Ligas
+    .navbar-nav {
+      a {
+        font-family: roboto-light;
+        font-size: 18pt;
+        color: #000;
+        padding-bottom: 5px;
+        @media (max-width: 768px) {
+          padding-left: 30px;
+        }
+      }
+      a:hover {
+        font-family: roboto-medium;
+        text-decoration: none;
+      }
+      a:visited, a:active, a:focus {
+        text-decoration: none;
+      }
+      a.activo {
+        font-family: roboto-regular;
+        text-decoration: none;
+      }
+      a.activo:hover, a.activo:visited, a.activo:active, a.activo:focus {
+        text-decoration: none;
+      }
+    }
+
+    #selector_de_idiomas {
+      padding-right: 15px;
+      text-align: right;
+      a {
+        font-size: 8pt !important;
+      }
+    }
+
   }
+
 }
